@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget password</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Forgot password form -->
+    <div class="container">
+       <h2>Forget Password</h2>
+        <div class="form-container">
+            <form name="loginForm" method="post" action="home.html">
+                <div class="input-name">
+                    <input type="email" placeholder="Email address" required class="text-name" name="email" id="email"> 
+                    <i class="error error-icon fas fa-exclamation-circle"></i>  
+                </div>
+                <div class="input-name">
+                  <input type="password" placeholder="Create New Password" required class="text-name"name="password" id="password">  
+              </div>
+              <div class="input-name">
+                <input type="password" placeholder="Confirm Password" required class="text-name">  
+              </div>
+                <!-- button for change password -->
+                <input type="button" onclick="login(loginForm)"class="button" value="Change">
+              </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- script for form validation -->
+    <script>
+      function login(loginForm){
+          if(loginForm.email.value && loginForm.password.value){
+              var email=document.getElementById("email").value;
+              window.location.href="login.html";  
+          }
+          else
+          alert("Please enter your email & password");
+      }
+      </script>
+</body>
+</html>

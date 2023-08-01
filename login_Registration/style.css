@@ -1,0 +1,90 @@
+/* Style for login.html and forgotpass.html */
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    background-color: #cbdefc;
+}
+.container{
+    background: white;
+    width: 300px;
+    padding: 25px;
+    margin: 100px auto 0;
+    margin-top: 150px;
+    border-radius: 5px;
+    box-shadow:  0 0 20px 0 rgba(173, 191, 200, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);;
+}
+.container h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px 0px 0px 10px;
+}
+.text{
+    text-align: right;
+    margin-top: -15px;
+    margin-right: 10px;
+ }
+ a{
+   text-align: right;
+ }
+.input-name{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+.name{
+    width:45%;
+    padding: 8px 0 8px 40px;
+}
+.input-name span{
+    margin-left:25px;
+}
+.text-name{
+    width:100% ;
+    padding: 8px 0 8px 40px;
+}
+.text-name .name{
+    border: 1px solid #7dd0d6;
+    outline: none;
+}
+.text-name:hover, .name:hover{
+    background-color: #fafafa;
+}
+.text-name:focus, .name:focus{
+    border: 1px solid blue;
+}
+.check{
+    position: relative;
+}
+.button{
+    display: inline-block;
+    background: blue;
+    background-color: blue;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width:100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.login_form #email_error,
+.login_form #pass_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18px;
+    color: #C62828;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}

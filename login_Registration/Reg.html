@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="stylereg.css">
+</head>
+<body>
+    <!-- Register password form -->
+    <div class="container">
+       <h2>Register</h2>
+       <div class="text">
+        <label for="">Have an account?<a href="login.html"
+            style="color:dodgerblue"> Login</a></label>
+       </div>
+        <div class="form-container">
+            <form name="loginForm" method="post" action="home.html">
+                <div class="input-name">
+                    <input type="text" placeholder="Name" class="text-name" required> 
+                </div>
+                <div class="input-name">
+                    <input type="email" placeholder="Email address" required class="text-name" name="email" id="email"> 
+                    <i class="error error-icon fas fa-exclamation-circle"></i>  
+                </div>
+                <div class="input-name">
+                    <input type="password" placeholder="Password" class="name" required name="password" id="password">
+                <span>
+                    <input type="password" placeholder="Confirm password" class="name" required>
+                </span>
+            </div>
+            <!-- checkbox for terms and privacy policy -->
+              <div class="input-name">
+                <input type="checkbox" class="check-button">
+                <label for="check-button" class="check"></label>I accept the<a href="Reg.html"
+                    style="color:dodgerblue"> terms</a> and <a href="Reg.html"
+                    style="color:dodgerblue"> privacy policy</a></label>
+              </div>
+                <!-- button for register -->
+              <div class="input-name">
+                <input type="button" onclick="login(loginForm)"class="button" value="Register">
+              </div>
+            </form>
+        </div>
+    </div>
+     <!-- script for form validation -->
+    <script>
+        function login(loginForm){
+            if(loginForm.email.value && loginForm.password.value){
+                var email=document.getElementById("email").value; 
+                var url="home.html?email="+encodeURIComponent(email)
+                window.location.href = url;
+            }
+            else
+            alert("Please enter your name email & password");
+        }
+    </script>
+
+</body>
+</html>

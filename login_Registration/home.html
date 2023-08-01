@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Style for table -->
+    <style>
+         table, th, td {
+          border:1px solid rgb(116, 218, 238);
+          border-collapse: collapse;
+          content: 'Empty cell';
+        }
+        table{
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+  <script>
+    // method for decoding the email to display on home page
+    var email=decodeURIComponent(window.location.search.replace("?email=",""))
+    document.write("<h4> Hi, "+ email+"</h4>")
+  </script>
+  <!-- Buttons -->
+  <div id="but" style="margin: 30px; margin-left: 0%;">
+    <!-- Function calling -->
+    <button onclick="red1()">Color 1st Row Red</button>
+    <button onclick="red2()">Color last Row Red</button>
+    <button onclick="reset()">Reset colors in Rows</button>
+  </div>
+      <!-- Table -->
+      <table>
+        <tr height="35px"style="background-color: rgb(225, 225, 225);">
+          <th>C1</th>
+          <th>C2</th> 
+          <th>C3</th>
+        </tr>
+        <tr id="tr1" height="25px">
+          <td></td>
+          <td ></td>
+          <td></td>
+        </tr>
+        <tr height="25px" width="30%" style="background-color: rgb(246, 246, 246);">
+          <td></td>
+          <td ></td>
+          <td></td>
+        </tr>
+        <tr height="25px">
+          <td></td>
+          <td ></td>
+          <td></td>
+        </tr>
+        <tr height="25px"  style="background-color:  rgb(246, 246, 246);">
+          <td></td>
+          <td ></td>
+          <td></td>
+        </tr>
+        <tr id="tr2" height="25px">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Functions to change color of table row -->
+     <script>
+        // Function to change color of first row of a table
+        function red1() {
+          var color=document.getElementById("tr2")
+            color.style.backgroundColor="inherit"
+            var color=document.getElementById("tr1")
+            color.style.backgroundColor="red"  
+        }
+           // Function to change color of second row of a table
+        function red2() {
+          var color=document.getElementById("tr1")
+            color.style.backgroundColor="inherit"
+            var color=document.getElementById("tr2")
+            color.style.backgroundColor="red"
+        }
+        function reset() {
+           // Function to reset color of table row
+            var color=document.getElementById("tr1")
+            color.style.backgroundColor="inherit"
+            var color=document.getElementById("tr2")
+            color.style.backgroundColor="inherit"
+        }
+    </script>  
+</body>
+</html> 
+

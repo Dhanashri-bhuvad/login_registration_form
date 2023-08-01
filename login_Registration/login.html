@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- login form -->
+    <div class="container">
+        <h2>Log in</h2>
+        <div class="text">
+            <label for="">or<a href="Reg.html" style="color:dodgerblue"> Create account</a></label>
+        </div>
+        <div class="form-container">
+            <form name="loginForm" method="post" action="home.html">
+
+                <div class="input-name">
+                    <input type="email" placeholder="Email address" required class="text-name" name="email" id="email">
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+
+                <div class="input-name">
+                    <input type="password" placeholder="Password" required class="text-name" name="password"
+                        id="password">
+                </div>
+                <!-- checkbox -->
+                <div class="input-name">
+                    <input type="checkbox" class="check-button">
+                    <label for="check-button" class="check"></label>Remember me
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Forgotpass"><a href="forgotpass.html" style="color:dodgerblue">Forget Password</a></label>
+                </div>
+                <!-- button for login -->
+                <input type="button" onclick="validate()" class="button" value="Log in">
+        </div>
+        </form>
+    </div>
+</div>
+    <!-- script for form validation -->
+    <script>
+        function validate() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            // email and password for login
+            //using this email only user can login
+            if (email == "hello@test.com" && password == "test" 
+                || email == "john.doe@test.com" && password == "hello" 
+                || email == "john.doe@test.com" && password == "john") {
+                    // method for encoding the email to display on home page
+                var url="home.html?email="+encodeURIComponent(email)
+                window.location.href = url;
+            }
+              //for any other email alert box will be displayed
+            else {
+                alert("Incorrect email or password");
+            }
+        }
+    </script>
+</body>
+
+</html>
